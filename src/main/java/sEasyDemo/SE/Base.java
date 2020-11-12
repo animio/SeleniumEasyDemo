@@ -32,8 +32,15 @@ public class Base {
 		}
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		String url = prop.getProperty("url");
+		driver.get(url);
+		
+		
+		
 		return driver;
 		
 	}
+	
 
 }
