@@ -1,27 +1,23 @@
 package sEasyDemo.SE;
 
 import java.io.IOException;
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import pageObjects.SingleInputFormPage;
+import pageObjects.CheckBoxDemoPage;
 import pageObjects.landingPage;
 
-
-
-public class singleInputFieldPageTest extends Base {
-	
+public class CheckBoxDemoTest extends Base {
 	public WebDriver driver;
 	public static Logger log =LogManager.getLogger(Base.class.getName());
 	
@@ -33,12 +29,12 @@ public class singleInputFieldPageTest extends Base {
 		String url = prop.getProperty("url");
 		driver.get(url);
 
-		
 	}
 	
 	
-	@Test(dataProvider="data")
-	public void getPage(String text) throws Exception {
+	@Test
+	public void clickCheckboxes() throws Exception {
+
 		landingPage LP = new landingPage(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(LP.popupX()));
@@ -48,38 +44,23 @@ public class singleInputFieldPageTest extends Base {
 		catch(Exception e){
 		}
 		LP.inputFormsLink().click();
-		LP.inputFormsSFD().click();
-		SingleInputFormPage SIFP = new SingleInputFormPage(driver);
-		SIFP.SIFenterMessageBox().sendKeys(text);
-		log.info("Text is entered in the text box");
-		SIFP.SIFshowMessageBtn().click();
-		log.info("Show message button is clicked");
-		Assert.assertEquals(SIFP.SIFyourMessageText().getText(), text);
-		log.info("Assertion passed, text entered and text displayed are identical");
-		int n = num();
-		SIFP.TIFenterValueA().sendKeys(Integer.toString(n));
-		int n1 = num();
-		SIFP.TIFenterValueB().sendKeys(Integer.toString(n1));
-		SIFP.TIFgetTotalBtn().click();
-		int sumAB = n + n1;
-		Assert.assertEquals(SIFP.TIFtotalAB().getText(), Integer.toString(sumAB));
-	
-	}
-
-	
-	private int num() {
-		Random number = new Random();
-		int n = number.nextInt(50);
-		return n;
+		LP.inputFormsCD().click();
+		CheckBoxDemoPage CBDP = new CheckBoxDemoPage(driver);
+		WebElement singleCheckbox = CBDP.SCD_checkbox();
+		singleCheckbox.click();
+		Assert.assertTrue(singleCheckbox.isSelected());
+		log.info("Single checkbox is selected");
+		try {
+		WebElement textInfo = CBDP.SCD_textinfo();
+		wait.until(ExpectedConditions.visibilityOf(textInfo));
+		Assert.assertTrue(textInfo.isDisplayed());
+		log.info("Message is displayed");
+		Assert.assertEquals(textInfo.getText(), "Success - Check box is checked");
+		}
+		catch(Exception e) {
+			log.info("Message is not shown");
+		}
 		
-	}
-
-
-	@DataProvider 
-	public Object[][] data() {
-		Object[][] data = new Object[1][1];
-		data[0][0] = "Hello world!";
-		return data;
 	}
 	
 	
@@ -91,5 +72,5 @@ public class singleInputFieldPageTest extends Base {
 	}
 	
 
-
+	
 }

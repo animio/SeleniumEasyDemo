@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sEasyDemo.SE.singleInputFieldPageTest">
+      <class name="sEasyDemo.SE.CheckBoxDemoTest">
         <methods>
-          <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="getPage"/>
+          <include name="tearDown"/>
+          <include name="clickCheckboxes"/>
         </methods>
-      </class> <!-- sEasyDemo.SE.singleInputFieldPageTest -->
+      </class> <!-- sEasyDemo.SE.CheckBoxDemoTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

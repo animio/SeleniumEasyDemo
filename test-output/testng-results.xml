@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-17T14:59:23 CET" name="Default suite" finished-at="2020-11-17T14:59:42 CET" duration-ms="18339">
+  <suite started-at="2020-11-26T22:29:28 CET" name="Suite" finished-at="2020-11-26T22:29:45 CET" duration-ms="16703">
     <groups>
     </groups>
-    <test started-at="2020-11-17T14:59:23 CET" name="Default test" finished-at="2020-11-17T14:59:42 CET" duration-ms="18339">
-      <class name="sEasyDemo.SE.singleInputFieldPageTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@3c9d0b9d]" started-at="2020-11-17T14:59:23 CET" name="initialize" finished-at="2020-11-17T14:59:33 CET" duration-ms="9765" status="PASS">
+    <test started-at="2020-11-26T22:29:28 CET" name="Checkbox Demo" finished-at="2020-11-26T22:29:41 CET" duration-ms="13194">
+      <class name="sEasyDemo.SE.CheckBoxDemoTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:sEasyDemo.SE.CheckBoxDemoTest@6e4566f1]" started-at="2020-11-26T22:29:28 CET" name="initialize" finished-at="2020-11-26T22:29:36 CET" duration-ms="8420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="getPage(java.lang.String)[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@3c9d0b9d]" started-at="2020-11-17T14:59:33 CET" name="getPage" data-provider="data" finished-at="2020-11-17T14:59:37 CET" duration-ms="3692" status="PASS">
+        <test-method signature="clickCheckboxes()[pri:0, instance:sEasyDemo.SE.CheckBoxDemoTest@6e4566f1]" started-at="2020-11-26T22:29:36 CET" name="clickCheckboxes" finished-at="2020-11-26T22:29:40 CET" duration-ms="3277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickCheckboxes -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sEasyDemo.SE.CheckBoxDemoTest@6e4566f1]" started-at="2020-11-26T22:29:40 CET" name="tearDown" finished-at="2020-11-26T22:29:41 CET" duration-ms="1487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- sEasyDemo.SE.CheckBoxDemoTest -->
+    </test> <!-- Checkbox Demo -->
+    <test started-at="2020-11-26T22:29:28 CET" name="Simple Form Demo" finished-at="2020-11-26T22:29:45 CET" duration-ms="16703">
+      <class name="sEasyDemo.SE.singleInputFieldPageTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@b7c4869]" started-at="2020-11-26T22:29:28 CET" name="initialize" finished-at="2020-11-26T22:29:36 CET" duration-ms="8389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="getPage(java.lang.String)[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@b7c4869]" started-at="2020-11-26T22:29:36 CET" name="getPage" data-provider="data" finished-at="2020-11-26T22:29:40 CET" duration-ms="3403" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,11 +38,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@3c9d0b9d]" started-at="2020-11-17T14:59:37 CET" name="tearDown" finished-at="2020-11-17T14:59:42 CET" duration-ms="4858" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@b7c4869]" started-at="2020-11-26T22:29:40 CET" name="tearDown" finished-at="2020-11-26T22:29:45 CET" duration-ms="4875" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- sEasyDemo.SE.singleInputFieldPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Simple Form Demo -->
+  </suite> <!-- Suite -->
 </testng-results>

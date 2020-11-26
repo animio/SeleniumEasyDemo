@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class singleInputFormPage {
+public class SingleInputFormPage {
 
 	
 	public WebDriver driver;
@@ -17,7 +17,7 @@ public class singleInputFormPage {
 	By TIFgetTotalBtn = By.xpath("//button[@type='button' and contains(text(), 'Get Total')]");
 	By TIFtotalAB = By.xpath("//span[@id='displayvalue']");
 	
-	public singleInputFormPage(WebDriver driver) {
+	public SingleInputFormPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
