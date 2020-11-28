@@ -55,7 +55,7 @@ public class CheckBoxDemoTest extends Base {
 		wait.until(ExpectedConditions.visibilityOf(textInfo));
 		Assert.assertTrue(textInfo.isDisplayed());
 		log.info("Message is displayed");
-		Assert.assertEquals(textInfo.getText(), "Success - Check box is checked");
+		Assert.assertEquals(textInfo.getText(), "Success - Check box is checkedl");
 		}
 		catch(Exception e) {
 			log.info("Message is not shown");
