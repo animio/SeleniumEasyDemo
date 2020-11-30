@@ -2,8 +2,6 @@ package sEasyDemo.SE;
 
 import java.io.IOException;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -28,8 +26,6 @@ public class singleInputFieldPageTest extends Base {
 	@BeforeTest
 	public void initialize() throws IOException {
 		driver = initializeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
 		String url = prop.getProperty("url");
 		driver.get(url);
 

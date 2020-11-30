@@ -1,0 +1,6 @@
+19:42:51.746 [main] INFO  sEasyDemo.SE.Base - Show message button is clicked
+19:42:51.775 [main] INFO  sEasyDemo.SE.Base - Assertion passed, text entered and text displayed are identical
+09:26:01.761 [TestNG-tests-1] INFO  sEasyDemo.SE.Base - Text is entered in the text box
+09:26:01.783 [TestNG-tests-2] INFO  sEasyDemo.SE.Base - Single checkbox is selected
+09:26:01.868 [TestNG-tests-2] INFO  sEasyDemo.SE.Base - Message is displayed
+09:26:01.897 [TestNG-tests-1] INFO  sEasyDemo.SE.Base - Show message button is clicked
