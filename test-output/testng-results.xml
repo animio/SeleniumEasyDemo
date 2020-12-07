@@ -2,28 +2,50 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-30T09:25:49 CET" name="Suite" finished-at="2020-11-30T09:26:06 CET" duration-ms="17736">
+  <suite started-at="2020-12-07T16:15:57 CET" name="Suite" finished-at="2020-12-07T16:16:21 CET" duration-ms="24179">
     <groups>
     </groups>
-    <test started-at="2020-11-30T09:25:49 CET" name="Checkbox Demo" finished-at="2020-11-30T09:26:03 CET" duration-ms="13810">
-      <class name="sEasyDemo.SE.CheckBoxDemoTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:sEasyDemo.SE.CheckBoxDemoTest@648c94da]" started-at="2020-11-30T09:25:49 CET" name="initialize" finished-at="2020-11-30T09:25:58 CET" duration-ms="9211" status="PASS">
+    <test started-at="2020-12-07T16:15:57 CET" name="Simple Form Demo" finished-at="2020-12-07T16:16:15 CET" duration-ms="17394">
+      <class name="sEasyDemo.SE.singleInputFieldPageTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@a8c1f44]" started-at="2020-12-07T16:15:57 CET" name="initialize" finished-at="2020-12-07T16:16:07 CET" duration-ms="10152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="clickCheckboxes()[pri:0, instance:sEasyDemo.SE.CheckBoxDemoTest@648c94da]" started-at="2020-11-30T09:25:58 CET" name="clickCheckboxes" finished-at="2020-11-30T09:26:01 CET" duration-ms="3421" status="FAIL">
+        <test-method signature="getPage(java.lang.String)[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@a8c1f44]" started-at="2020-12-07T16:16:07 CET" name="getPage" data-provider="data" finished-at="2020-12-07T16:16:10 CET" duration-ms="2349" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hello world!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@a8c1f44]" started-at="2020-12-07T16:16:10 CET" name="tearDown" finished-at="2020-12-07T16:16:15 CET" duration-ms="4878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- sEasyDemo.SE.singleInputFieldPageTest -->
+    </test> <!-- Simple Form Demo -->
+    <test started-at="2020-12-07T16:15:57 CET" name="Checkbox Demo" finished-at="2020-12-07T16:16:21 CET" duration-ms="24179">
+      <class name="sEasyDemo.SE.CheckBoxDemoTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:sEasyDemo.SE.CheckBoxDemoTest@5ed731d0]" started-at="2020-12-07T16:15:57 CET" name="initialize" finished-at="2020-12-07T16:16:07 CET" duration-ms="9811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="clickCheckboxes()[pri:0, instance:sEasyDemo.SE.CheckBoxDemoTest@5ed731d0]" started-at="2020-12-07T16:16:07 CET" name="clickCheckboxes" finished-at="2020-12-07T16:16:20 CET" duration-ms="13206" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Success - Check box is checkedl] but found [Success - Check box is checked]]]>
+              <![CDATA[expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Success - Check box is checkedl] but found [Success - Check box is checked]
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
 at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at sEasyDemo.SE.CheckBoxDemoTest.clickCheckboxes(CheckBoxDemoTest.java:54)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertFalse(Assert.java:65)
+at org.testng.Assert.assertFalse(Assert.java:75)
+at sEasyDemo.SE.CheckBoxDemoTest.clickCheckboxes(CheckBoxDemoTest.java:97)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,34 +75,11 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickCheckboxes -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sEasyDemo.SE.CheckBoxDemoTest@648c94da]" started-at="2020-11-30T09:26:02 CET" name="tearDown" finished-at="2020-11-30T09:26:03 CET" duration-ms="633" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sEasyDemo.SE.CheckBoxDemoTest@5ed731d0]" started-at="2020-12-07T16:16:21 CET" name="tearDown" finished-at="2020-12-07T16:16:21 CET" duration-ms="626" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- sEasyDemo.SE.CheckBoxDemoTest -->
     </test> <!-- Checkbox Demo -->
-    <test started-at="2020-11-30T09:25:49 CET" name="Simple Form Demo" finished-at="2020-11-30T09:26:06 CET" duration-ms="17736">
-      <class name="sEasyDemo.SE.singleInputFieldPageTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@676cf48]" started-at="2020-11-30T09:25:49 CET" name="initialize" finished-at="2020-11-30T09:25:58 CET" duration-ms="9205" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="getPage(java.lang.String)[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@676cf48]" started-at="2020-11-30T09:25:58 CET" name="getPage" data-provider="data" finished-at="2020-11-30T09:26:02 CET" duration-ms="3644" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Hello world!]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sEasyDemo.SE.singleInputFieldPageTest@676cf48]" started-at="2020-11-30T09:26:02 CET" name="tearDown" finished-at="2020-11-30T09:26:06 CET" duration-ms="4858" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- sEasyDemo.SE.singleInputFieldPageTest -->
-    </test> <!-- Simple Form Demo -->
   </suite> <!-- Suite -->
 </testng-results>

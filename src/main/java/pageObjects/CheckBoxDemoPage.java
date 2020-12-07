@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +15,7 @@ public class CheckBoxDemoPage {
 	By MCD_option2 = By.xpath("//div[@class='checkbox']/label[text()='Option 2']");
 	By MCD_option3 = By.xpath("//div[@class='checkbox']/label[text()='Option 3']");
 	By MCD_option4 = By.xpath("//div[@class='checkbox']/label[text()='Option 4']");
+	By MCD_allOptions = By.xpath("//input[@class='cb1-element']");
 	By MCD_checkAllBtn = By.xpath("//input[@id='check1']");
 	
 
@@ -47,6 +50,10 @@ public class CheckBoxDemoPage {
 	
 	public WebElement MCD_checkAllBtn() {
 		return driver.findElement(MCD_checkAllBtn);
+	}
+
+	public List <WebElement> MCD_allOptions() {
+		return driver.findElements(MCD_allOptions);
 	}
 
 }

@@ -144,14 +144,14 @@
                   <a name="clickCheckboxes">
                   </a> <!-- clickCheckboxes -->
                   <span class="method-name">clickCheckboxes</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Success - Check box is checkedl] but found [Success - Check box is checked]
-	at sEasyDemo.SE.CheckBoxDemoTest.clickCheckboxes(CheckBoxDemoTest.java:54)
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
+	at sEasyDemo.SE.CheckBoxDemoTest.clickCheckboxes(CheckBoxDemoTest.java:97)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-... Removed 23 stack frames
+... Removed 22 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -238,18 +238,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getPage')
-data.setCell(0, 2, 'sEasyDemo.SE.singleInputFieldPageTest')
-data.setCell(0, 3, 3644);
+data.setCell(0, 1, 'clickCheckboxes')
+data.setCell(0, 2, 'sEasyDemo.SE.CheckBoxDemoTest')
+data.setCell(0, 3, 13206);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'clickCheckboxes')
-data.setCell(1, 2, 'sEasyDemo.SE.CheckBoxDemoTest')
-data.setCell(1, 3, 3421);
+data.setCell(1, 1, 'getPage')
+data.setCell(1, 2, 'sEasyDemo.SE.singleInputFieldPageTest')
+data.setCell(1, 3, 2349);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -294,25 +294,25 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">clickCheckboxes</span>
-                <span class="method-start">9225 ms</span>
+                <span class="method-start">9832 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">sEasyDemo.SE.singleInputFieldPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">getPage(Hello world!)</span>
-                <span class="method-start">9225 ms</span>
+                <span class="method-start">10154 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">12873 ms</span>
+                <span class="method-start">12512 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">sEasyDemo.SE.CheckBoxDemoTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13172 ms</span>
+                <span class="method-start">23549 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

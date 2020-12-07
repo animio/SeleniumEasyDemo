@@ -6,7 +6,6 @@
       <class name="sEasyDemo.SE.CheckBoxDemoTest">
         <methods>
           <include name="initialize"/>
-          <include name="tearDown"/>
           <include name="clickCheckboxes"/>
         </methods>
       </class> <!-- sEasyDemo.SE.CheckBoxDemoTest -->

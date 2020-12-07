@@ -1,6 +1,9 @@
 package sEasyDemo.SE;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -42,6 +45,9 @@ public class CheckBoxDemoTest extends Base {
 		LP.inputFormsLink().click();
 		LP.inputFormsCD().click();
 		CheckBoxDemoPage CBDP = new CheckBoxDemoPage(driver);
+		
+		//First part for single check box
+		
 		WebElement singleCheckbox = CBDP.SCD_checkbox();
 		singleCheckbox.click();
 		Assert.assertTrue(singleCheckbox.isSelected());
@@ -56,6 +62,57 @@ public class CheckBoxDemoTest extends Base {
 		catch(Exception e) {
 			log.info("Message is not shown");
 		}
+		
+		// Second part for multiple check boxes
+		
+		List <WebElement> allOptions = new ArrayList<WebElement>();
+		for (WebElement element : CBDP.MCD_allOptions()){
+			allOptions.add(element);
+	    }
+		for(WebElement checkbox: allOptions) {
+			checkbox.click();
+			try {
+				Assert.assertTrue(checkbox.isSelected());
+			}
+			catch(Exception e) {
+				log.info("Checkbox is not selected");
+			}
+		}
+		
+		WebElement buttonAll = CBDP.MCD_checkAllBtn();
+		String buttonText =  buttonAll.getAttribute("value");	
+		
+		try {
+			wait.until(ExpectedConditions.attributeToBe(buttonAll, "value", "Uncheck All" ));
+			Assert.assertEquals(buttonText, "Uncheck All");
+		}
+		catch(Exception e) {
+			log.info("Button text did not change");
+		}
+		
+		buttonAll.click();
+		
+		for(WebElement checkbox: allOptions) {
+			try {
+				Assert.assertFalse(checkbox.isSelected());
+			}
+			catch(Exception e) {
+				log.info("Checkbox is still selected");
+			}
+		}
+		
+		buttonAll.click();
+		
+		CBDP.MCD_checkAllBtn().click();
+		for(WebElement checkbox: allOptions) {
+			try {
+				Assert.assertTrue(checkbox.isSelected());
+			}
+			catch(Exception e) {
+				log.info("Button does not work");
+			}
+		}
+		
 		
 	}
 	
