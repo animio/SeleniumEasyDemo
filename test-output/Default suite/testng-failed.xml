@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sEasyDemo.SE.CheckBoxDemoTest">
+      <class name="sEasyDemo.SE.SelectDropdownListTest">
         <methods>
+          <include name="selectListDemo"/>
           <include name="initialize"/>
-          <include name="clickCheckboxes"/>
         </methods>
-      </class> <!-- sEasyDemo.SE.CheckBoxDemoTest -->
+      </class> <!-- sEasyDemo.SE.SelectDropdownListTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

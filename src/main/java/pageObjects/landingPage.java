@@ -12,14 +12,13 @@ public class landingPage {
 	By inputFormsSFD = By.xpath("//li[@class='tree-branch']/ul/li/a[contains(text(), 'Simple Form Demo')]");
 	By popupX = By.xpath("//a[@id='at-cv-lightbox-close']");
 	By inputFormsCD = By.xpath("//li[@class='tree-branch']/ul/li/a[contains(text(), 'Checkbox Demo')]");
+	By inputFormsSDL = By.xpath("//li[@class='tree-branch']/ul/li/a[contains(text(), 'Select Dropdown List')]");
 	
 
 
 	public landingPage(WebDriver driver) {
 		this.driver=driver;
 	}
-
-
 
 
 	public WebElement popupX() {
@@ -40,6 +39,11 @@ public class landingPage {
 	public WebElement inputFormsCD() {
 		
 		return driver.findElement(inputFormsCD);
+	}
+	
+	public WebElement inputFormsSDL() {
+		
+		return driver.findElement(inputFormsSDL);
 	}
 	
 

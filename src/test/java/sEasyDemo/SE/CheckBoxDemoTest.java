@@ -36,8 +36,8 @@ public class CheckBoxDemoTest extends Base {
 
 		landingPage LP = new landingPage(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(LP.popupX()));
 		try {
+		wait.until(ExpectedConditions.visibilityOf(LP.popupX()));
 		LP.popupX().click();
 		}
 		catch(Exception e){

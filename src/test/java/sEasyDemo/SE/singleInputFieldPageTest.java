@@ -37,8 +37,8 @@ public class singleInputFieldPageTest extends Base {
 	public void getPage(String text) throws Exception {
 		landingPage LP = new landingPage(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(LP.popupX()));
 		try {
+		wait.until(ExpectedConditions.visibilityOf(LP.popupX()));
 		LP.popupX().click();
 		}
 		catch(Exception e){

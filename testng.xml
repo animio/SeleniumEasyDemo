@@ -14,4 +14,9 @@
 			<class name="sEasyDemo.SE.CheckBoxDemoTest" />
 		</classes>
 	</test> <!-- Test -->
+	<test thread-count="5" name="Checkbox Demo">
+		<classes>
+			<class name="sEasyDemo.SE.SelectDropdownListTest" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->
